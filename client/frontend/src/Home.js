@@ -8,7 +8,7 @@ const Home=()=>{
     
         const gettask=()=>{
     
-            fetch('http://localhost:5000/tasks')
+            fetch('https://task-app-2mc0.onrender.com/tasks')
             .then(response=>response.json())
             .then(data=>{
                 setTask(data);

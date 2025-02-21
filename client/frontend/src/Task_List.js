@@ -7,7 +7,7 @@ const Task_List=()=>{
 
     const gettask=()=>{
 
-        fetch('http://localhost:5000/tasks')
+        fetch('https://task-app-2mc0.onrender.com/tasks')
         .then(response=>response.json())
         .then(data=>{
             setTask(data);
@@ -72,7 +72,7 @@ export default Task_List;
 //   const [tasks, setTask] = useState([]);
  
 //   const gettask = () => {
-// fetch('http://localhost:5000/tasks')
+// fetch('https://task-app-2mc0.onrender.com/tasks')
 //       .then((response) => response.json())
 //       .then((data) => {
 //         console.log("Fetched data:", data);

@@ -3,7 +3,7 @@ import './Delete_Task.css';
 const Delete_Task=()=>{
     const [tasks,setTask]=useState([]);
     const gettask=()=>{
-        fetch('http://localhost:5000/tasks')
+        fetch('https://task-app-2mc0.onrender.com/tasks')
         .then(response=>response.json())
         .then(data=>{
             setTask(data);
@@ -11,7 +11,7 @@ const Delete_Task=()=>{
         .catch(err=>console.log("error fetcing:",err));
     };
     const deletetask=(taskid)=>{
-        fetch(`http://localhost:5000/tasks/${taskid}`,{
+        fetch(`https://task-app-2mc0.onrender.com/tasks/${taskid}`,{
           method: 'DELETE'
 
         })

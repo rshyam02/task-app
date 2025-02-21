@@ -16,7 +16,7 @@ const Edit_Task=()=>{
     const [selectedtaskid,settaskid]=useState(null);
     const gettask=()=>{
 
-        fetch('http://localhost:5000/tasks')
+        fetch('https://task-app-2mc0.onrender.com/tasks')
         .then(response=>response.json())
         .then(data=>{
             setTask(data);
@@ -55,7 +55,7 @@ const Edit_Task=()=>{
     };
     const handleStatus=(e,taskid)=>{
       const newstatus= e.target.checked;
-      fetch(`http://localhost:5000/taskstatus/${taskid}`,{
+      fetch(`https://task-app-2mc0.onrender.com/taskstatus/${taskid}`,{
         method:"PUT",
         headers:{
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const Edit_Task=()=>{
     }
     const handleSave=()=>{
       console.log("saving");
-      fetch(`http://localhost:5000/tasks/${selectedtaskid}`,{
+      fetch(`https://task-app-2mc0.onrender.com/tasks/${selectedtaskid}`,{
         method:"PUT",
         headers:{
           "Content-Type": "application/json",
@@ -195,7 +195,7 @@ export default Edit_Task;
 //   const navigate = useNavigate();
  
 //   const gettask = () => {
-//     fetch('http://localhost:5000/tasks') // Specify your API URL here
+//     fetch('https://task-app-2mc0.onrender.com/tasks') // Specify your API URL here
 //       .then(response => response.json())
 //       .then(data => {
 //         setTask(data);
@@ -345,7 +345,7 @@ export default Edit_Task;
 //   const [tasks, setTask] = useState([]);
  
 //   const gettask = () => {
-// fetch('http://localhost:5000/tasks')
+// fetch('https://task-app-2mc0.onrender.com/tasks')
 //       .then((response) => response.json())
 //       .then((data) => {
 //         console.log("Fetched data:", data);
